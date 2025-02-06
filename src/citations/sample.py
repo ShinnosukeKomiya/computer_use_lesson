@@ -39,4 +39,7 @@ response = client.messages.create(
     max_tokens=1024,
     messages=messages
 )
-print(response)
+# 回答内容
+print(response.content[0].text)
+# 引用内容
+print(response.content[0].citations)
